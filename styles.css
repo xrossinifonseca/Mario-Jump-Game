@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.game-board {
+  width: 100%;
+  height: 500px;
+  border-bottom: 15px solid rgb(24, 174, 24);
+  margin: 0 auto;
+  position: relative;
+  background: linear-gradient(#87ceeb, #e0f6ff);
+}
+.clound {
+  width: 550px;
+  position: absolute;
+  animation: clounds-animations 20s infinite linear;
+}
+.pipe {
+  position: absolute;
+  bottom: 0;
+  width: 80px;
+  animation: pipe-animation 1.5s infinite linear;
+}
+.mario {
+  width: 150px;
+  position: absolute;
+  bottom: 0;
+}
+.jump {
+  animation: jump 500ms ease-out;
+}
+.btn-new {
+  position: absolute;
+  left: 590px;
+  top: 220px;
+  width: 180px;
+  cursor: pointer;
+  display: none;
+}
+.game-over {
+  width: 380px;
+  position: absolute;
+  left: 490px;
+  top: 100px;
+  display: none;
+}
+.score {
+  position: absolute;
+  left: 650px;
+  top: 30px;
+  font-size: 70px;
+  font-family: "Open Sans", sans-serif;
+
+  color: #fff;
+}
+
+@keyframes pipe-animation {
+  from {
+    right: -80px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+  40% {
+    bottom: 180px;
+  }
+  50% {
+    bottom: 180px;
+  }
+  60% {
+    bottom: 180px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+@keyframes clounds-animations {
+  from {
+    right: -550px;
+  }
+  to {
+    right: 100%;
+  }
+}
